@@ -1,0 +1,218 @@
+:root {
+  --bg-start: #f2eaff;
+  --bg-end: #fefcff;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: #ffffff;
+  --text: #261c35;
+  --muted: #66547f;
+  --border: rgba(108, 80, 153, 0.18);
+  --accent: #5f3ea8;
+  --accent-soft: #ece2ff;
+  --shadow: rgba(57, 34, 96, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", "Trebuchet MS", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 0% 0%, #efe2ff 0%, transparent 35%),
+    linear-gradient(160deg, var(--bg-start) 0%, var(--bg-end) 70%);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+.hero {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+h1 {
+  font-family: "Fraunces", "Georgia", serif;
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem);
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.search-panel {
+  margin-bottom: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.search-panel label {
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+#repo-search {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--surface-strong);
+}
+
+#repo-search:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 38%, white);
+  border-color: var(--accent);
+}
+
+.search-empty {
+  margin: 0 0 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 0.8rem;
+  padding: 0.8rem 1rem;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.repo-section {
+  margin-bottom: 1.25rem;
+}
+
+.section-title {
+  font-family: "Fraunces", "Georgia", serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.2rem;
+}
+
+.section-count {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.repo-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.repo-card {
+  border: 1px solid var(--border);
+  border-radius: 0.95rem;
+  padding: 1rem;
+  background: var(--surface-strong);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.repo-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Fraunces", "Georgia", serif;
+}
+
+.repo-card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.repo-card a:hover {
+  text-decoration: underline;
+}
+
+.repo-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.badge {
+  font-size: 0.78rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #4a2d89;
+}
+
+.repo-description {
+  margin: 0 0 0.6rem;
+  color: #3f3154;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.empty {
+  margin: 0;
+  border: 1px dashed var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.section-empty {
+  margin: 0;
+  border: 1px dashed var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 1.2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-top: 2rem;
+  }
+
+  .hero {
+    padding: 1.1rem;
+  }
+
+  #repo-search {
+    font-size: 0.96rem;
+  }
+
+  .repo-card-top {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .badges {
+    justify-content: start;
+  }
+}
