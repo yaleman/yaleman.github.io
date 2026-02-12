@@ -1,12 +1,8 @@
 from __future__ import annotations
 
-from generate import (
-    SEARCH_SCRIPT_CONTENT,
-    STYLESHEET_CONTENT,
-    Repository,
-    parse_repository,
-    render_page,
-)
+from pathlib import Path
+
+from generate import Repository, parse_repository, render_page
 
 
 def test_parse_repository_skips_private_repos() -> None:
@@ -112,7 +108,10 @@ def test_render_page_archived_repos_in_trailing_section() -> None:
 
 
 def test_asset_content_has_expected_theme_tokens() -> None:
-    assert "--bg-start: #f2eaff;" in STYLESHEET_CONTENT
-    assert "radial-gradient(circle at 0% 0%" in STYLESHEET_CONTENT
-    assert "repo-search" in SEARCH_SCRIPT_CONTENT
-    assert "dataset.repoLanguage" in SEARCH_SCRIPT_CONTENT
+    stylesheet = Path("site/style.css").read_text(encoding="utf-8")
+    search_script = Path("site/search.js").read_text(encoding="utf-8")
+
+    assert "--bg-start: #f2eaff;" in stylesheet
+    assert "radial-gradient(circle at 0% 0%" in stylesheet
+    assert "repo-search" in search_script
+    assert "dataset.repoLanguage" in search_script
