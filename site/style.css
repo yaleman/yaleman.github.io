@@ -81,6 +81,38 @@ h1 {
   border-color: var(--accent);
 }
 
+.language-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.language-filter {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+}
+
+.language-filter:hover {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.language-filter.is-active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: #4a2d89;
+}
+
+.language-filter:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 40%, white);
+  outline-offset: 1px;
+}
+
 .search-empty {
   margin: 0 0 1rem;
   border: 1px dashed var(--border);
@@ -205,6 +237,10 @@ footer {
 
   #repo-search {
     font-size: 0.96rem;
+  }
+
+  .language-filter {
+    font-size: 0.86rem;
   }
 
   .repo-card-top {

@@ -18,6 +18,15 @@ DEFAULT_OUTPUT = Path("site/index.html")
 DEFAULT_STYLESHEET_HREF = "style.css"
 DEFAULT_SCRIPT_SRC = "search.js"
 GITHUB_API_ROOT = "https://api.github.com"
+LANGUAGE_FILTERS: tuple[tuple[str, str, str], ...] = (
+    ("", "🌐", "All"),
+    ("python", "🐍", "Python"),
+    ("rust", "🦀", "Rust"),
+    ("go", "⚙️", "Go"),
+    ("javascript", "✨", "JavaScript"),
+    ("typescript", "🧠", "TypeScript"),
+    ("shell", "🐚", "Shell"),
+)
 
 
 @dataclass(frozen=True)
@@ -172,7 +181,8 @@ def _render_repository_card(repository: Repository) -> str:
     )
     language = escape(repository.language) if repository.language else "Unknown"
     data_repo_name = escape(repository.name, quote=True)
-    data_repo_language = escape(repository.language, quote=True)
+    normalized_language = repository.language.casefold() if repository.language else "unknown"
+    data_repo_language = escape(normalized_language, quote=True)
     data_repo_description = escape(repository.description, quote=True)
 
     return f"""
@@ -196,6 +206,17 @@ def _render_repository_card(repository: Repository) -> str:
     """
 
 
+def _render_language_filters() -> str:
+    buttons: list[str] = []
+    for language, emoji, label in LANGUAGE_FILTERS:
+        classes = "language-filter is-active" if language == "" else "language-filter"
+        aria_pressed = "true" if language == "" else "false"
+        buttons.append(
+            f'<button type="button" class="{classes}" data-language="{escape(language, quote=True)}" aria-pressed="{aria_pressed}">{emoji} {escape(label)}</button>'
+        )
+    return "\n        ".join(buttons)
+
+
 def _render_repository_section(
     section_id: str, title: str, repositories: Sequence[Repository], empty_message: str
 ) -> str:
@@ -207,7 +228,7 @@ def _render_repository_section(
     return f"""
     <section class="repo-section" id="{escape(section_id, quote=True)}">
       <h2 class="section-title">{escape(title)}</h2>
-      <p class="section-count">Repositories: {len(repositories)}</p>
+      <p class="section-count" data-total="{len(repositories)}">Repositories: {len(repositories)}/{len(repositories)}</p>
       <div class="repo-list">
         {list_content}
       </div>
@@ -238,6 +259,7 @@ def render_page(
         archived_repositories,
         "No archived repositories found.",
     )
+    language_filters = _render_language_filters()
 
     return f"""<!doctype html>
 <html lang="en">
@@ -251,7 +273,7 @@ def render_page(
   <main>
     <header class="hero">
       <h1>{escaped_username}'s repositories</h1>
-      <p class="subtitle">Public repositories: {len(repositories)}</p>
+      <p class="subtitle" id="repo-total-count" data-total="{len(repositories)}">Public repositories: {len(repositories)}/{len(repositories)}</p>
     </header>
     <section class="search-panel">
       <label for="repo-search">Search repositories</label>
@@ -262,6 +284,9 @@ def render_page(
         placeholder="Filter by name, language, or description"
         autocomplete="off"
       >
+      <div class="language-filters" role="group" aria-label="Filter repositories by language">
+        {language_filters}
+      </div>
     </section>
     <p id="search-empty" class="search-empty" hidden>No repositories match your search.</p>
     {active_section}

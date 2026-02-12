@@ -54,7 +54,7 @@ def test_render_page_escapes_html() -> None:
         stylesheet_href="assets/style.css",
         script_src="assets/search.js",
     )
-    assert "Public repositories: 1" in page
+    assert "Public repositories: 1/1" in page
     assert '<link rel="stylesheet" href="assets/style.css">' in page
     assert '<script src="assets/search.js" defer></script>' in page
     assert "<body>" in page
@@ -63,7 +63,12 @@ def test_render_page_escapes_html() -> None:
     assert "<script>" not in page
     assert "&lt;script&gt;alert(1)&lt;/script&gt;" in page
     assert 'data-repo-name="&lt;repo&gt;"' in page
+    assert 'data-repo-language="python"' in page
     assert 'data-repo-description="&lt;script&gt;alert(1)&lt;/script&gt;"' in page
+    assert "🐍 Python" in page
+    assert "🦀 Rust" in page
+    assert 'class="language-filter is-active"' in page
+    assert "Repositories: 1/1" in page
 
 
 def test_render_page_empty_state() -> None:

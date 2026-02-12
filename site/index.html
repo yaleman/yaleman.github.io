@@ -10,7 +10,7 @@
   <main>
     <header class="hero">
       <h1>yaleman's repositories</h1>
-      <p class="subtitle">Public repositories: 281</p>
+      <p class="subtitle" id="repo-total-count" data-total="282">Public repositories: 282/282</p>
     </header>
     <section class="search-panel">
       <label for="repo-search">Search repositories</label>
@@ -21,18 +21,65 @@
         placeholder="Filter by name, language, or description"
         autocomplete="off"
       >
+      <div class="language-filters" role="group" aria-label="Filter repositories by language">
+        <button type="button" class="language-filter is-active" data-language="" aria-pressed="true">🌐 All</button>
+        <button type="button" class="language-filter" data-language="python" aria-pressed="false">🐍 Python</button>
+        <button type="button" class="language-filter" data-language="rust" aria-pressed="false">🦀 Rust</button>
+        <button type="button" class="language-filter" data-language="go" aria-pressed="false">⚙️ Go</button>
+        <button type="button" class="language-filter" data-language="javascript" aria-pressed="false">✨ JavaScript</button>
+        <button type="button" class="language-filter" data-language="typescript" aria-pressed="false">🧠 TypeScript</button>
+        <button type="button" class="language-filter" data-language="shell" aria-pressed="false">🐚 Shell</button>
+      </div>
     </section>
     <p id="search-empty" class="search-empty" hidden>No repositories match your search.</p>
     
     <section class="repo-section" id="active-repositories">
       <h2 class="section-title">Active repositories</h2>
-      <p class="section-count">Repositories: 186</p>
+      <p class="section-count" data-total="187">Repositories: 187/187</p>
       <div class="repo-list">
         
     <article
       class="repo-card"
+      data-repo-name="osint-graph"
+      data-repo-language="rust"
+      data-repo-description=""
+    >
+      <div class="repo-card-top">
+        <h2><a href="https://github.com/yaleman/osint-graph">osint-graph</a></h2>
+        <div class="badges"></div>
+      </div>
+      <p class="repo-description">No description provided.</p>
+      <div class="repo-meta">
+        <span>Language: Rust</span>
+        <span>Stars: 1</span>
+        <span>Updated: 2026-02-12</span>
+      </div>
+    </article>
+    
+
+    <article
+      class="repo-card"
+      data-repo-name="yaleman.github.io"
+      data-repo-language="html"
+      data-repo-description="yaleman.github.io"
+    >
+      <div class="repo-card-top">
+        <h2><a href="https://github.com/yaleman/yaleman.github.io">yaleman.github.io</a></h2>
+        <div class="badges"></div>
+      </div>
+      <p class="repo-description">yaleman.github.io</p>
+      <div class="repo-meta">
+        <span>Language: HTML</span>
+        <span>Stars: 0</span>
+        <span>Updated: 2026-02-12</span>
+      </div>
+    </article>
+    
+
+    <article
+      class="repo-card"
       data-repo-name="yaleman"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="yaleman"
     >
       <div class="repo-card-top">
@@ -51,7 +98,7 @@
     <article
       class="repo-card"
       data-repo-name="shrinky"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -70,7 +117,7 @@
     <article
       class="repo-card"
       data-repo-name="ethernet-over-macca"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Crimes against OSI"
     >
       <div class="repo-card-top">
@@ -89,7 +136,7 @@
     <article
       class="repo-card"
       data-repo-name="kanidm"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Kanidm: A simple, secure and fast identity management platform"
     >
       <div class="repo-card-top">
@@ -107,27 +154,8 @@
 
     <article
       class="repo-card"
-      data-repo-name="osint-graph"
-      data-repo-language="Rust"
-      data-repo-description=""
-    >
-      <div class="repo-card-top">
-        <h2><a href="https://github.com/yaleman/osint-graph">osint-graph</a></h2>
-        <div class="badges"></div>
-      </div>
-      <p class="repo-description">No description provided.</p>
-      <div class="repo-meta">
-        <span>Language: Rust</span>
-        <span>Stars: 1</span>
-        <span>Updated: 2026-02-11</span>
-      </div>
-    </article>
-    
-
-    <article
-      class="repo-card"
       data-repo-name="github_linter"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Automating all the little things I need to check in my repos."
     >
       <div class="repo-card-top">
@@ -146,7 +174,7 @@
     <article
       class="repo-card"
       data-repo-name="snmp-json"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="SNMP scan + json output"
     >
       <div class="repo-card-top">
@@ -165,7 +193,7 @@
     <article
       class="repo-card"
       data-repo-name="pygoodwe"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Python library for querying the GoodWe Solar SEMS API"
     >
       <div class="repo-card-top">
@@ -184,7 +212,7 @@
     <article
       class="repo-card"
       data-repo-name="filekid"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="FileKid - A web-based file manager"
     >
       <div class="repo-card-top">
@@ -203,7 +231,7 @@
     <article
       class="repo-card"
       data-repo-name="shorter"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -222,7 +250,7 @@
     <article
       class="repo-card"
       data-repo-name="httpet"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="httpet.org"
     >
       <div class="repo-card-top">
@@ -241,7 +269,7 @@
     <article
       class="repo-card"
       data-repo-name="crabcakes"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Simple little Rusty S3 Server"
     >
       <div class="repo-card-top">
@@ -260,7 +288,7 @@
     <article
       class="repo-card"
       data-repo-name="vibe-image-comparator"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A Rust CLI tool for finding duplicate images using rotation-invariant perceptual hashing with SQLite caching"
     >
       <div class="repo-card-top">
@@ -279,7 +307,7 @@
     <article
       class="repo-card"
       data-repo-name="sambot-parser"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="sambot-parser"
     >
       <div class="repo-card-top">
@@ -298,7 +326,7 @@
     <article
       class="repo-card"
       data-repo-name="hoofprint"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Code keeper"
     >
       <div class="repo-card-top">
@@ -317,7 +345,7 @@
     <article
       class="repo-card"
       data-repo-name="maremma"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Guarding your herd 🐐🐐 🐕"
     >
       <div class="repo-card-top">
@@ -336,7 +364,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-github-sbom"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="splunk-github-sbom"
     >
       <div class="repo-card-top">
@@ -355,7 +383,7 @@
     <article
       class="repo-card"
       data-repo-name="python-sweep"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -374,7 +402,7 @@
     <article
       class="repo-card"
       data-repo-name="ntp-clock"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="NTP Clock things"
     >
       <div class="repo-card-top">
@@ -393,7 +421,7 @@
     <article
       class="repo-card"
       data-repo-name="shell-sorter"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="I have a lot of shells and this helps sort them."
     >
       <div class="repo-card-top">
@@ -412,7 +440,7 @@
     <article
       class="repo-card"
       data-repo-name="trailfinder"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Pulling and tracing routes through network devices."
     >
       <div class="repo-card-top">
@@ -431,7 +459,7 @@
     <article
       class="repo-card"
       data-repo-name="shrinky-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Rusty image shrinkifier"
     >
       <div class="repo-card-top">
@@ -450,7 +478,7 @@
     <article
       class="repo-card"
       data-repo-name="check-k8s"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Kubernetes check things"
     >
       <div class="repo-card-top">
@@ -469,7 +497,7 @@
     <article
       class="repo-card"
       data-repo-name="yales-netflow-parser"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="What it says on the tin"
     >
       <div class="repo-card-top">
@@ -488,7 +516,7 @@
     <article
       class="repo-card"
       data-repo-name="overcast-opml-parser"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -507,7 +535,7 @@
     <article
       class="repo-card"
       data-repo-name="clean-big-targets"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Util searching for target dirs for rust and cleaning them up"
     >
       <div class="repo-card-top">
@@ -526,7 +554,7 @@
     <article
       class="repo-card"
       data-repo-name="axum-csp"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Axum Content-Security-Policy headers"
     >
       <div class="repo-card-top">
@@ -545,7 +573,7 @@
     <article
       class="repo-card"
       data-repo-name="markdown-wrangler"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -564,7 +592,7 @@
     <article
       class="repo-card"
       data-repo-name="kanidm-profiles"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Kanidm client profile switcher"
     >
       <div class="repo-card-top">
@@ -583,7 +611,7 @@
     <article
       class="repo-card"
       data-repo-name="brainfuck-rs-vibe"
-      data-repo-language="Brainfuck"
+      data-repo-language="brainfuck"
       data-repo-description="Vibe-coding a brainfuck interpreter in Rust"
     >
       <div class="repo-card-top">
@@ -602,7 +630,7 @@
     <article
       class="repo-card"
       data-repo-name="js-cleanifier"
-      data-repo-language="JavaScript"
+      data-repo-language="javascript"
       data-repo-description="Taking bad JS and making it less messy"
     >
       <div class="repo-card-top">
@@ -621,7 +649,7 @@
     <article
       class="repo-card"
       data-repo-name="link-finder"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Rusty link checker"
     >
       <div class="repo-card-top">
@@ -640,7 +668,7 @@
     <article
       class="repo-card"
       data-repo-name="tasmota-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Interacting with tasmota things"
     >
       <div class="repo-card-top">
@@ -659,7 +687,7 @@
     <article
       class="repo-card"
       data-repo-name="brisbane-bin-data"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Rusty bin data"
     >
       <div class="repo-card-top">
@@ -678,7 +706,7 @@
     <article
       class="repo-card"
       data-repo-name="aoc2024"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Advent of Code 2024 in Rust"
     >
       <div class="repo-card-top">
@@ -697,7 +725,7 @@
     <article
       class="repo-card"
       data-repo-name="portdb.yaleman.org"
-      data-repo-language="Less"
+      data-repo-language="less"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -716,7 +744,7 @@
     <article
       class="repo-card"
       data-repo-name="base64-dns-parser"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -735,7 +763,7 @@
     <article
       class="repo-card"
       data-repo-name="ocsf-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="OCSF schema for Rust"
     >
       <div class="repo-card-top">
@@ -754,7 +782,7 @@
     <article
       class="repo-card"
       data-repo-name="brainfuck-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="brainfuck-rs"
     >
       <div class="repo-card-top">
@@ -773,7 +801,7 @@
     <article
       class="repo-card"
       data-repo-name="check_ipv6_address"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="check_ipv6_address is a nagios check for if my network address has changed."
     >
       <div class="repo-card-top">
@@ -792,7 +820,7 @@
     <article
       class="repo-card"
       data-repo-name="TA-pushover"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Pushover App for Splunk"
     >
       <div class="repo-card-top">
@@ -811,7 +839,7 @@
     <article
       class="repo-card"
       data-repo-name="certbrother"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="certbrother"
     >
       <div class="repo-card-top">
@@ -830,7 +858,7 @@
     <article
       class="repo-card"
       data-repo-name="ldapsearch-json"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A knockoff of ldapsearch but outputs in JSON."
     >
       <div class="repo-card-top">
@@ -849,7 +877,7 @@
     <article
       class="repo-card"
       data-repo-name="aws_redirector_module"
-      data-repo-language="HCL"
+      data-repo-language="hcl"
       data-repo-description="Terraform module for setting up a CloudFront-fronted S3 redirector. Redirect one URL to another."
     >
       <div class="repo-card-top">
@@ -868,7 +896,7 @@
     <article
       class="repo-card"
       data-repo-name="docker-splunk"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Splunk Docker GitHub Repository"
     >
       <div class="repo-card-top">
@@ -887,7 +915,7 @@
     <article
       class="repo-card"
       data-repo-name="splunkwasm"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Testing you can run rust-sourced WASM in Splunk&#x27;s Python"
     >
       <div class="repo-card-top">
@@ -906,7 +934,7 @@
     <article
       class="repo-card"
       data-repo-name="pam_explainer"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Terrible little hacky thing to try and work out what PAM is doing"
     >
       <div class="repo-card-top">
@@ -925,7 +953,7 @@
     <article
       class="repo-card"
       data-repo-name="axum_forwarded_header"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Parser for the &#x27;Forwarded&#x27; HTTP header"
     >
       <div class="repo-card-top">
@@ -944,7 +972,7 @@
     <article
       class="repo-card"
       data-repo-name="decrypt2"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Fork of the DECRYPT app on SplunkBase"
     >
       <div class="repo-card-top">
@@ -963,7 +991,7 @@
     <article
       class="repo-card"
       data-repo-name="dotfiles"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="dotfiles"
     >
       <div class="repo-card-top">
@@ -982,7 +1010,7 @@
     <article
       class="repo-card"
       data-repo-name="magic-hate-ball"
-      data-repo-language="TypeScript"
+      data-repo-language="typescript"
       data-repo-description="A magic-8-ball thing"
     >
       <div class="repo-card-top">
@@ -1001,7 +1029,7 @@
     <article
       class="repo-card"
       data-repo-name="cloudflare-dyndns"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1020,7 +1048,7 @@
     <article
       class="repo-card"
       data-repo-name="mqtt-monitor"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Docker container to just sub to a topic"
     >
       <div class="repo-card-top">
@@ -1039,7 +1067,7 @@
     <article
       class="repo-card"
       data-repo-name="goatns"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="🐐-powered authoritative DNS server"
     >
       <div class="repo-card-top">
@@ -1058,7 +1086,7 @@
     <article
       class="repo-card"
       data-repo-name="anthropic-data"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1077,7 +1105,7 @@
     <article
       class="repo-card"
       data-repo-name="git_project_status"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="iterate through the first-level subdirectories and dump a git status"
     >
       <div class="repo-card-top">
@@ -1096,7 +1124,7 @@
     <article
       class="repo-card"
       data-repo-name="concread"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Concurrently Readable Data Structures for Rust"
     >
       <div class="repo-card-top">
@@ -1115,7 +1143,7 @@
     <article
       class="repo-card"
       data-repo-name="parsething"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Pure rust parsers for file formats."
     >
       <div class="repo-card-top">
@@ -1134,7 +1162,7 @@
     <article
       class="repo-card"
       data-repo-name="pyaussiebb"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Aussie Broadband API Python module"
     >
       <div class="repo-card-top">
@@ -1153,7 +1181,7 @@
     <article
       class="repo-card"
       data-repo-name="py-auto-docs"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Example of documentation"
     >
       <div class="repo-card-top">
@@ -1172,7 +1200,7 @@
     <article
       class="repo-card"
       data-repo-name="template-project"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Cookiecutter template that should do things properly"
     >
       <div class="repo-card-top">
@@ -1191,7 +1219,7 @@
     <article
       class="repo-card"
       data-repo-name="google-reader-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="google-reader-rs"
     >
       <div class="repo-card-top">
@@ -1210,7 +1238,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="splunk-rs"
     >
       <div class="repo-card-top">
@@ -1229,7 +1257,7 @@
     <article
       class="repo-card"
       data-repo-name="memes-api"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Memes API"
     >
       <div class="repo-card-top">
@@ -1248,7 +1276,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-sdk-games"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1267,7 +1295,7 @@
     <article
       class="repo-card"
       data-repo-name="pvoutput"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="PVOutput.org python API module"
     >
       <div class="repo-card-top">
@@ -1286,7 +1314,7 @@
     <article
       class="repo-card"
       data-repo-name="factorio-web"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Terrible Factorio server web UI"
     >
       <div class="repo-card-top">
@@ -1305,7 +1333,7 @@
     <article
       class="repo-card"
       data-repo-name="goodwe2pvoutput"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Take the data from your Goodwe inverter and upload it to PVOutput.org"
     >
       <div class="repo-card-top">
@@ -1324,7 +1352,7 @@
     <article
       class="repo-card"
       data-repo-name="ucc-gen-docker"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="UCC gen in a Docker container"
     >
       <div class="repo-card-top">
@@ -1343,7 +1371,7 @@
     <article
       class="repo-card"
       data-repo-name="mikrotik-inspector"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Mikrotik JSON-ifying thing"
     >
       <div class="repo-card-top">
@@ -1362,7 +1390,7 @@
     <article
       class="repo-card"
       data-repo-name="homebrew-proxmark3"
-      data-repo-language="Ruby"
+      data-repo-language="ruby"
       data-repo-description="Homebrew tap containing proxmark3 software/firmware"
     >
       <div class="repo-card-top">
@@ -1381,7 +1409,7 @@
     <article
       class="repo-card"
       data-repo-name="check_goodwe"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Nagios Goodwe system checks"
     >
       <div class="repo-card-top">
@@ -1400,7 +1428,7 @@
     <article
       class="repo-card"
       data-repo-name="gix-of-theseus"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A Rust rewrite of git-of-theseus."
     >
       <div class="repo-card-top">
@@ -1419,7 +1447,7 @@
     <article
       class="repo-card"
       data-repo-name="webauthn-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="An implementation of webauthn components for Rustlang servers"
     >
       <div class="repo-card-top">
@@ -1438,7 +1466,7 @@
     <article
       class="repo-card"
       data-repo-name="tga-shortage-scraper"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Scrapes the TGA shortage page and gives you nice JSON"
     >
       <div class="repo-card-top">
@@ -1457,7 +1485,7 @@
     <article
       class="repo-card"
       data-repo-name="container-backups"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1476,7 +1504,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-app-leads"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1495,7 +1523,7 @@
     <article
       class="repo-card"
       data-repo-name="thin-controller"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Tiny hacky FastAPI app to manage AWS instances."
     >
       <div class="repo-card-top">
@@ -1514,7 +1542,7 @@
     <article
       class="repo-card"
       data-repo-name="yaleman-meshtastic-tools"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1533,7 +1561,7 @@
     <article
       class="repo-card"
       data-repo-name="expenses-finder"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Using combinatorics and a blatant disgregard for CPU cycles, figure out your expenses using one of these tools!"
     >
       <div class="repo-card-top">
@@ -1552,7 +1580,7 @@
     <article
       class="repo-card"
       data-repo-name="auspost"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Australia Post website library"
     >
       <div class="repo-card-top">
@@ -1571,7 +1599,7 @@
     <article
       class="repo-card"
       data-repo-name="obd2-play"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="OBD2 Things"
     >
       <div class="repo-card-top">
@@ -1590,7 +1618,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-downloader"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A tiny script to help you download Splunk installers."
     >
       <div class="repo-card-top">
@@ -1609,7 +1637,7 @@
     <article
       class="repo-card"
       data-repo-name="dashlight"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1628,7 +1656,7 @@
     <article
       class="repo-card"
       data-repo-name="systemctl-json"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1647,7 +1675,7 @@
     <article
       class="repo-card"
       data-repo-name="github-notifications-cleaner"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1666,7 +1694,7 @@
     <article
       class="repo-card"
       data-repo-name="telegrab"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Telegram file downloader"
     >
       <div class="repo-card-top">
@@ -1685,7 +1713,7 @@
     <article
       class="repo-card"
       data-repo-name="fuckjpeg"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Because the .jpeg extension is horrible."
     >
       <div class="repo-card-top">
@@ -1704,7 +1732,7 @@
     <article
       class="repo-card"
       data-repo-name="sprintf"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A python sprintf formatstring playground."
     >
       <div class="repo-card-top">
@@ -1723,7 +1751,7 @@
     <article
       class="repo-card"
       data-repo-name="aws-config-rule-fixer"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="AWS Config Rule fiximicator"
     >
       <div class="repo-card-top">
@@ -1742,7 +1770,7 @@
     <article
       class="repo-card"
       data-repo-name="tesseract-memes"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Using tesseract to pull text from images"
     >
       <div class="repo-card-top">
@@ -1761,7 +1789,7 @@
     <article
       class="repo-card"
       data-repo-name="qbtapi"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1780,7 +1808,7 @@
     <article
       class="repo-card"
       data-repo-name="dnsmasqmon"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="dnsmasq monitoring"
     >
       <div class="repo-card-top">
@@ -1799,7 +1827,7 @@
     <article
       class="repo-card"
       data-repo-name="fail2ban-importer"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Pull from JSON lists and fail2ban things."
     >
       <div class="repo-card-top">
@@ -1818,7 +1846,7 @@
     <article
       class="repo-card"
       data-repo-name="cable-tester"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Notes about making a speedy network cable tester"
     >
       <div class="repo-card-top">
@@ -1837,7 +1865,7 @@
     <article
       class="repo-card"
       data-repo-name="cargo-yes"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Reimplementing &quot;yes&quot; in rust."
     >
       <div class="repo-card-top">
@@ -1856,7 +1884,7 @@
     <article
       class="repo-card"
       data-repo-name="homepage"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Hosted homepage thing"
     >
       <div class="repo-card-top">
@@ -1875,7 +1903,7 @@
     <article
       class="repo-card"
       data-repo-name="advent-of-code-2023"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Advent of Code 2023, in Rust"
     >
       <div class="repo-card-top">
@@ -1894,7 +1922,7 @@
     <article
       class="repo-card"
       data-repo-name="CO2SensorCase"
-      data-repo-language="G-code"
+      data-repo-language="g-code"
       data-repo-description="MH-Z14A + Wemos D1 = Wifi CO2 sensor"
     >
       <div class="repo-card-top">
@@ -1913,7 +1941,7 @@
     <article
       class="repo-card"
       data-repo-name="mqttgpio"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Home Assistant autoconfiguring MQTT-powered GPIO control for a Raspberry Pi"
     >
       <div class="repo-card-top">
@@ -1932,7 +1960,7 @@
     <article
       class="repo-card"
       data-repo-name="oh-brother"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -1951,7 +1979,7 @@
     <article
       class="repo-card"
       data-repo-name="kanidm-k8s"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="Kanidm on k8s"
     >
       <div class="repo-card-top">
@@ -1970,7 +1998,7 @@
     <article
       class="repo-card"
       data-repo-name="greed"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="greed"
     >
       <div class="repo-card-top">
@@ -1989,7 +2017,7 @@
     <article
       class="repo-card"
       data-repo-name="terraform_lambda"
-      data-repo-language="HCL"
+      data-repo-language="hcl"
       data-repo-description="A module for terraform-ing up an AWS Lambda Function"
     >
       <div class="repo-card-top">
@@ -2008,7 +2036,7 @@
     <article
       class="repo-card"
       data-repo-name="nagios_check_certificate"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2027,7 +2055,7 @@
     <article
       class="repo-card"
       data-repo-name="splunkhec"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Splunk HEC interfacing library"
     >
       <div class="repo-card-top">
@@ -2046,7 +2074,7 @@
     <article
       class="repo-card"
       data-repo-name="fileshimstem"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Don&#x27;t use this it&#x27;s dumb"
     >
       <div class="repo-card-top">
@@ -2065,7 +2093,7 @@
     <article
       class="repo-card"
       data-repo-name="wildcard_matcher"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A simple Python string wildcard matcher widget."
     >
       <div class="repo-card-top">
@@ -2084,7 +2112,7 @@
     <article
       class="repo-card"
       data-repo-name="cloudflare-stats"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2103,7 +2131,7 @@
     <article
       class="repo-card"
       data-repo-name="tabcounter"
-      data-repo-language="AppleScript"
+      data-repo-language="applescript"
       data-repo-description="A few utilities for counting my active tabs and storing the data"
     >
       <div class="repo-card-top">
@@ -2122,7 +2150,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-s3-spa"
-      data-repo-language="HTML"
+      data-repo-language="html"
       data-repo-description="A single paged app running from some magic"
     >
       <div class="repo-card-top">
@@ -2141,7 +2169,7 @@
     <article
       class="repo-card"
       data-repo-name="eyewitness-scripts"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2160,7 +2188,7 @@
     <article
       class="repo-card"
       data-repo-name="aussiebb-outage-watcher"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2179,7 +2207,7 @@
     <article
       class="repo-card"
       data-repo-name="platformio_auto_config"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2198,7 +2226,7 @@
     <article
       class="repo-card"
       data-repo-name="portDB"
-      data-repo-language="JavaScript"
+      data-repo-language="javascript"
       data-repo-description="A network port database mini site"
     >
       <div class="repo-card-top">
@@ -2217,7 +2245,7 @@
     <article
       class="repo-card"
       data-repo-name="apache-cloudflare-iplist"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Designed for updating Apache config to trust cloudflare headers, will work with any IP list though."
     >
       <div class="repo-card-top">
@@ -2236,7 +2264,7 @@
     <article
       class="repo-card"
       data-repo-name="lessnews"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Fixing links from news sites"
     >
       <div class="repo-card-top">
@@ -2255,7 +2283,7 @@
     <article
       class="repo-card"
       data-repo-name="security_content"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Splunk Security Content"
     >
       <div class="repo-card-top">
@@ -2274,7 +2302,7 @@
     <article
       class="repo-card"
       data-repo-name="moonlight-common-c"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Core implementation of Nvidia&#x27;s GameStream protocol"
     >
       <div class="repo-card-top">
@@ -2293,7 +2321,7 @@
     <article
       class="repo-card"
       data-repo-name="upload-sbom-go"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="| Public | Simple CLI tool to upload SBOMs to Dependency Track"
     >
       <div class="repo-card-top">
@@ -2312,7 +2340,7 @@
     <article
       class="repo-card"
       data-repo-name="qbit"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A Rust library for interacting with qBittorrent&#x27;s Web API"
     >
       <div class="repo-card-top">
@@ -2331,7 +2359,7 @@
     <article
       class="repo-card"
       data-repo-name="tracing-forest"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2350,7 +2378,7 @@
     <article
       class="repo-card"
       data-repo-name="iam-rs"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Rust library for parsing and evaluating IAM policies. Provider-agnostic and designed for building flexible authorization systems."
     >
       <div class="repo-card-top">
@@ -2369,7 +2397,7 @@
     <article
       class="repo-card"
       data-repo-name="scratchstack-aws-signature"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="AWS signature verification routines (Rust)"
     >
       <div class="repo-card-top">
@@ -2388,7 +2416,7 @@
     <article
       class="repo-card"
       data-repo-name="facebook_data_parser"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Parser for Facebook data dumps"
     >
       <div class="repo-card-top">
@@ -2407,7 +2435,7 @@
     <article
       class="repo-card"
       data-repo-name="baitroute-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Baitroute parser and beelzebub config converter for rust"
     >
       <div class="repo-card-top">
@@ -2426,7 +2454,7 @@
     <article
       class="repo-card"
       data-repo-name="secretstring"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A Rust crate that won&#x27;t show your secrets."
     >
       <div class="repo-card-top">
@@ -2445,7 +2473,7 @@
     <article
       class="repo-card"
       data-repo-name="DECEIVE"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="DECeption with Evaluative Integrated Validation Engine (DECEIVE): Let an LLM do all the hard honeypot work!"
     >
       <div class="repo-card-top">
@@ -2464,7 +2492,7 @@
     <article
       class="repo-card"
       data-repo-name="test-tracing-instrument"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2483,7 +2511,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-sdk-python"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Splunk Software Development Kit for Python"
     >
       <div class="repo-card-top">
@@ -2502,7 +2530,7 @@
     <article
       class="repo-card"
       data-repo-name="timeout-cli"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Rust timeout command"
     >
       <div class="repo-card-top">
@@ -2521,7 +2549,7 @@
     <article
       class="repo-card"
       data-repo-name="ioc_extract-rs"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Extract indicators like urls,domains,ip,emails,etc... from a given string"
     >
       <div class="repo-card-top">
@@ -2540,7 +2568,7 @@
     <article
       class="repo-card"
       data-repo-name="tld-download-rs"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Download TLD suffixes"
     >
       <div class="repo-card-top">
@@ -2559,7 +2587,7 @@
     <article
       class="repo-card"
       data-repo-name="sam-bot"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Bot to create MISP events from data in Slack"
     >
       <div class="repo-card-top">
@@ -2578,7 +2606,7 @@
     <article
       class="repo-card"
       data-repo-name="trainpi"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Controlling my LEGO train with the build hat and Python"
     >
       <div class="repo-card-top">
@@ -2597,7 +2625,7 @@
     <article
       class="repo-card"
       data-repo-name="spamhaus-drop"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Spamhaus DROP list tools"
     >
       <div class="repo-card-top">
@@ -2616,7 +2644,7 @@
     <article
       class="repo-card"
       data-repo-name="satosa-saml-proxy"
-      data-repo-language="Dockerfile"
+      data-repo-language="dockerfile"
       data-repo-description="An opinionated guide and container to proxy SAML-only apps to Kanidm OIDC endpoints."
     >
       <div class="repo-card-top">
@@ -2635,7 +2663,7 @@
     <article
       class="repo-card"
       data-repo-name="pyrdp"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="RDP monster-in-the-middle (mitm) and library for Python with the ability to watch connections live or after the fact"
     >
       <div class="repo-card-top">
@@ -2654,7 +2682,7 @@
     <article
       class="repo-card"
       data-repo-name="velociraptor-docker"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="Docker image for Velocidex Velociraptor"
     >
       <div class="repo-card-top">
@@ -2673,7 +2701,7 @@
     <article
       class="repo-card"
       data-repo-name="BasicUrlscanPy"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="A very, very simple base Python clase to use with urlscan.io"
     >
       <div class="repo-card-top">
@@ -2692,7 +2720,7 @@
     <article
       class="repo-card"
       data-repo-name="oauth2-proxy"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="A reverse proxy that provides authentication with Google, Azure, OpenID Connect and many more identity providers."
     >
       <div class="repo-card-top">
@@ -2711,7 +2739,7 @@
     <article
       class="repo-card"
       data-repo-name="nist-nvd-py"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Interacting with the NIST NVD API"
     >
       <div class="repo-card-top">
@@ -2730,7 +2758,7 @@
     <article
       class="repo-card"
       data-repo-name="beelzebub"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="A secure low code honeypot framework, leveraging AI for System Virtualization."
     >
       <div class="repo-card-top">
@@ -2749,7 +2777,7 @@
     <article
       class="repo-card"
       data-repo-name="scrappy-mac-charger-monitor"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="(AI-generated, low standards apply) Graph Mac charge speed over time"
     >
       <div class="repo-card-top">
@@ -2768,7 +2796,7 @@
     <article
       class="repo-card"
       data-repo-name="mdbook-template"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A mdbook preprocessor that allows the re-usability of template files with dynamic arguments"
     >
       <div class="repo-card-top">
@@ -2787,7 +2815,7 @@
     <article
       class="repo-card"
       data-repo-name="scutil-parser"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -2806,7 +2834,7 @@
     <article
       class="repo-card"
       data-repo-name="satosa-docker"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Docker Official Image packaging for SATOSA"
     >
       <div class="repo-card-top">
@@ -2825,7 +2853,7 @@
     <article
       class="repo-card"
       data-repo-name="hsm-crypto"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A library for cryptographic operations backed by a HSM or TPM"
     >
       <div class="repo-card-top">
@@ -2844,7 +2872,7 @@
     <article
       class="repo-card"
       data-repo-name="ldap-proxy"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A fast, simple, in-memory caching proxy for ldap that allows limiting of dn&#x27;s and their searches."
     >
       <div class="repo-card-top">
@@ -2863,7 +2891,7 @@
     <article
       class="repo-card"
       data-repo-name="opentelemetry-rust"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="The Rust OpenTelemetry implementation"
     >
       <div class="repo-card-top">
@@ -2882,7 +2910,7 @@
     <article
       class="repo-card"
       data-repo-name="temp-css-svg"
-      data-repo-language="HTML"
+      data-repo-language="html"
       data-repo-description="SVG Colouring Test"
     >
       <div class="repo-card-top">
@@ -2901,7 +2929,7 @@
     <article
       class="repo-card"
       data-repo-name="my-pull-requests"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Showcase your Open Source Contributions (pull requests)."
     >
       <div class="repo-card-top">
@@ -2920,7 +2948,7 @@
     <article
       class="repo-card"
       data-repo-name="contentctl"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Splunk Content Control Tool"
     >
       <div class="repo-card-top">
@@ -2939,7 +2967,7 @@
     <article
       class="repo-card"
       data-repo-name="features"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="A collection of Dev Container Features managed by Dev Container spec maintainers. See https://github.com/devcontainers/feature-starter to publish your own"
     >
       <div class="repo-card-top">
@@ -2958,7 +2986,7 @@
     <article
       class="repo-card"
       data-repo-name="misp_docker"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="A production ready Dockered MISP"
     >
       <div class="repo-card-top">
@@ -2977,7 +3005,7 @@
     <article
       class="repo-card"
       data-repo-name="mailcow-dockerized"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="mailcow: dockerized - 🐮 + 🐋 = 💕"
     >
       <div class="repo-card-top">
@@ -2996,7 +3024,7 @@
     <article
       class="repo-card"
       data-repo-name="meshtastic-site"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Meshtastic project website and documentation"
     >
       <div class="repo-card-top">
@@ -3015,7 +3043,7 @@
     <article
       class="repo-card"
       data-repo-name="yaleman-meshtastic-web"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Meshtastic Web Client"
     >
       <div class="repo-card-top">
@@ -3034,7 +3062,7 @@
     <article
       class="repo-card"
       data-repo-name="hass-core"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description=":house_with_garden: Open source home automation that puts local control and privacy first."
     >
       <div class="repo-card-top">
@@ -3053,7 +3081,7 @@
     <article
       class="repo-card"
       data-repo-name="addonfactory-ucc-library"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="UCC Helper Library used by Splunk Add-ons"
     >
       <div class="repo-card-top">
@@ -3072,7 +3100,7 @@
     <article
       class="repo-card"
       data-repo-name="test-wiretap-splunk"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3091,7 +3119,7 @@
     <article
       class="repo-card"
       data-repo-name="python-tesla-fleet-api"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Python library for Tesla Fleet API and Teslemetry"
     >
       <div class="repo-card-top">
@@ -3110,7 +3138,7 @@
     <article
       class="repo-card"
       data-repo-name="Splunk-Class-httpevent"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Python class to submit events to Splunk HTTP Event Collector"
     >
       <div class="repo-card-top">
@@ -3129,7 +3157,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-mltk-container-docker"
-      data-repo-language="Jupyter Notebook"
+      data-repo-language="jupyter notebook"
       data-repo-description="Splunk App for Data Science and Deep Learning - container images repository"
     >
       <div class="repo-card-top">
@@ -3148,7 +3176,7 @@
     <article
       class="repo-card"
       data-repo-name="nagios-disk-monitoring"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Nagios Disk Monitoring with Python"
     >
       <div class="repo-card-top">
@@ -3167,7 +3195,7 @@
     <article
       class="repo-card"
       data-repo-name="ldap3"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Rust LDAP3 Server Protocol Library"
     >
       <div class="repo-card-top">
@@ -3186,7 +3214,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-otel-collector"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3205,7 +3233,7 @@
     <article
       class="repo-card"
       data-repo-name="addonfactory-ucc-generator"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A framework to generate UI-based Splunk Add-ons."
     >
       <div class="repo-card-top">
@@ -3224,7 +3252,7 @@
     <article
       class="repo-card"
       data-repo-name="bitburner-typescript-template"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Starter repo for players who want to write bitburner scripts in typescript."
     >
       <div class="repo-card-top">
@@ -3243,7 +3271,7 @@
     <article
       class="repo-card"
       data-repo-name="vigil-llm"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="⚡ Vigil ⚡  Detect prompt injections, jailbreaks, and other potentially risky Large Language Model (LLM) inputs"
     >
       <div class="repo-card-top">
@@ -3262,7 +3290,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk_easm_worker"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3281,7 +3309,7 @@
     <article
       class="repo-card"
       data-repo-name="llama"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Inference code for LLaMA models"
     >
       <div class="repo-card-top">
@@ -3300,7 +3328,7 @@
     <article
       class="repo-card"
       data-repo-name="oauthenticator"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="OAuth + JupyterHub Authenticator = OAuthenticator"
     >
       <div class="repo-card-top">
@@ -3319,7 +3347,7 @@
     <article
       class="repo-card"
       data-repo-name="test-rs-expect"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3338,7 +3366,7 @@
     <article
       class="repo-card"
       data-repo-name="rs-simple-kvstore"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Simple TCP kvstore"
     >
       <div class="repo-card-top">
@@ -3357,7 +3385,7 @@
     <article
       class="repo-card"
       data-repo-name="kanidm_cluster"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="Kanidm cluster config"
     >
       <div class="repo-card-top">
@@ -3376,7 +3404,7 @@
     <article
       class="repo-card"
       data-repo-name="get-issuing-certs"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Get the issuing cert chain from a host and push it into a file, good for updating CA trust chains in a YOLO method."
     >
       <div class="repo-card-top">
@@ -3395,7 +3423,7 @@
     <article
       class="repo-card"
       data-repo-name="cherrybomb"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Stop half-done APIs! Cherrybomb is a CLI tool that helps you avoid undefined user behaviour by auditing your API specifications, validating them and running API security tests."
     >
       <div class="repo-card-top">
@@ -3414,7 +3442,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk_app_for_easm"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3433,7 +3461,7 @@
     <article
       class="repo-card"
       data-repo-name="nfsserve"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="A Rust NFS Server implementation"
     >
       <div class="repo-card-top">
@@ -3452,7 +3480,7 @@
     <article
       class="repo-card"
       data-repo-name="dshield"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="DShield Raspberry Pi Sensor"
     >
       <div class="repo-card-top">
@@ -3471,7 +3499,7 @@
     <article
       class="repo-card"
       data-repo-name="esphome"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems."
     >
       <div class="repo-card-top">
@@ -3490,7 +3518,7 @@
     <article
       class="repo-card"
       data-repo-name="django-ses"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="A Django email backend for Amazon&#x27;s Simple Email Service"
     >
       <div class="repo-card-top">
@@ -3509,7 +3537,7 @@
     <article
       class="repo-card"
       data-repo-name="rdz_ttgo_sonde"
-      data-repo-language="C++"
+      data-repo-language="c++"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3528,7 +3556,7 @@
     <article
       class="repo-card"
       data-repo-name="docker-simplesamlphp"
-      data-repo-language="PHP"
+      data-repo-language="php"
       data-repo-description="A docker image for easy deployment of SimpleSAMLphp as either an Identity Provider or as a Service Provider."
     >
       <div class="repo-card-top">
@@ -3547,7 +3575,7 @@
     <article
       class="repo-card"
       data-repo-name="Tasmota"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Alternative firmware for ESP8266 with easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX. Full documentation at"
     >
       <div class="repo-card-top">
@@ -3568,13 +3596,13 @@
     
     <section class="repo-section" id="archived-repositories">
       <h2 class="section-title">Archived repositories</h2>
-      <p class="section-count">Repositories: 95</p>
+      <p class="section-count" data-total="95">Repositories: 95/95</p>
       <div class="repo-list">
         
     <article
       class="repo-card"
       data-repo-name="cargo-nobackup"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Automatically create .nobackup files in places to stop things getting backed up."
     >
       <div class="repo-card-top">
@@ -3593,7 +3621,7 @@
     <article
       class="repo-card"
       data-repo-name="serde_yml_roundtrip"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3612,7 +3640,7 @@
     <article
       class="repo-card"
       data-repo-name="aptly"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3631,7 +3659,7 @@
     <article
       class="repo-card"
       data-repo-name="cve-2025-24813-poc"
-      data-repo-language="Java"
+      data-repo-language="java"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3650,7 +3678,7 @@
     <article
       class="repo-card"
       data-repo-name="python-self-signed-cert"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="python-self-signed-cert"
     >
       <div class="repo-card-top">
@@ -3669,7 +3697,7 @@
     <article
       class="repo-card"
       data-repo-name="onnx-phonics"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="onnx-phonics"
     >
       <div class="repo-card-top">
@@ -3688,7 +3716,7 @@
     <article
       class="repo-card"
       data-repo-name="otel-fastapi-noisemaker"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="FastAPI and OpenTelemetry noisemaker"
     >
       <div class="repo-card-top">
@@ -3707,7 +3735,7 @@
     <article
       class="repo-card"
       data-repo-name="tidetrawler"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Trawling through packages"
     >
       <div class="repo-card-top">
@@ -3726,7 +3754,7 @@
     <article
       class="repo-card"
       data-repo-name="kemono"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3745,7 +3773,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-qld-covid"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Splunking the Queensland Health Covid data"
     >
       <div class="repo-card-top">
@@ -3764,7 +3792,7 @@
     <article
       class="repo-card"
       data-repo-name="slack-emoji-grabber"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3783,7 +3811,7 @@
     <article
       class="repo-card"
       data-repo-name="test-until-next-heading"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3802,7 +3830,7 @@
     <article
       class="repo-card"
       data-repo-name="egui-memetool"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="memetool"
     >
       <div class="repo-card-top">
@@ -3821,7 +3849,7 @@
     <article
       class="repo-card"
       data-repo-name="can_we_subuid"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3840,7 +3868,7 @@
     <article
       class="repo-card"
       data-repo-name="chat-ui"
-      data-repo-language="JavaScript"
+      data-repo-language="javascript"
       data-repo-description="chat-ui"
     >
       <div class="repo-card-top">
@@ -3859,7 +3887,7 @@
     <article
       class="repo-card"
       data-repo-name="renamer"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="renamer"
     >
       <div class="repo-card-top">
@@ -3878,7 +3906,7 @@
     <article
       class="repo-card"
       data-repo-name="tailscale-webfinger"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Tailscale webfinger responder"
     >
       <div class="repo-card-top">
@@ -3897,7 +3925,7 @@
     <article
       class="repo-card"
       data-repo-name="bitburner"
-      data-repo-language="JavaScript"
+      data-repo-language="javascript"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -3916,7 +3944,7 @@
     <article
       class="repo-card"
       data-repo-name="wordle"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Leave me alone I code things."
     >
       <div class="repo-card-top">
@@ -3935,7 +3963,7 @@
     <article
       class="repo-card"
       data-repo-name="otel_example"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="otel + rust example"
     >
       <div class="repo-card-top">
@@ -3954,7 +3982,7 @@
     <article
       class="repo-card"
       data-repo-name="link-checker"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Yet another link checker thing"
     >
       <div class="repo-card-top">
@@ -3973,7 +4001,7 @@
     <article
       class="repo-card"
       data-repo-name="kubectl-with-jq"
-      data-repo-language="Dockerfile"
+      data-repo-language="dockerfile"
       data-repo-description="kubectl and jq in a container"
     >
       <div class="repo-card-top">
@@ -3992,7 +4020,7 @@
     <article
       class="repo-card"
       data-repo-name="rp2040_joystick"
-      data-repo-language="C++"
+      data-repo-language="c++"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4011,7 +4039,7 @@
     <article
       class="repo-card"
       data-repo-name="browserdirector"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4030,7 +4058,7 @@
     <article
       class="repo-card"
       data-repo-name="soar-extpose"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4049,7 +4077,7 @@
     <article
       class="repo-card"
       data-repo-name="kanidm-builder"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4068,7 +4096,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-jobsearch"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4087,7 +4115,7 @@
     <article
       class="repo-card"
       data-repo-name="advent_of_code_2022"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="advent of code 2022 in rust"
     >
       <div class="repo-card-top">
@@ -4106,7 +4134,7 @@
     <article
       class="repo-card"
       data-repo-name="pybackground"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A little wallpaper-munger I made."
     >
       <div class="repo-card-top">
@@ -4125,7 +4153,7 @@
     <article
       class="repo-card"
       data-repo-name="epaper_housenet"
-      data-repo-language="C"
+      data-repo-language="c"
       data-repo-description="epaper thingie"
     >
       <div class="repo-card-top">
@@ -4144,7 +4172,7 @@
     <article
       class="repo-card"
       data-repo-name="clippy-2022-11-15"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="clippy-2022-11-15"
     >
       <div class="repo-card-top">
@@ -4163,7 +4191,7 @@
     <article
       class="repo-card"
       data-repo-name="jsd_job_bot"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Shows which jobs are in my JSD queue"
     >
       <div class="repo-card-top">
@@ -4182,7 +4210,7 @@
     <article
       class="repo-card"
       data-repo-name="cookies"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Moved to https://gitlab.com/sashahart/cookies"
     >
       <div class="repo-card-top">
@@ -4201,7 +4229,7 @@
     <article
       class="repo-card"
       data-repo-name="pfsense-api-client"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A python package implementing a client for the pfSense API."
     >
       <div class="repo-card-top">
@@ -4220,7 +4248,7 @@
     <article
       class="repo-card"
       data-repo-name="duti"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="A command-line tool to select default applications for document types and URL schemes on Mac OS X"
     >
       <div class="repo-card-top">
@@ -4239,7 +4267,7 @@
     <article
       class="repo-card"
       data-repo-name="stephenweiss-docker-crud"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="A sample project to explore Docker, Node, and Postgres"
     >
       <div class="repo-card-top">
@@ -4258,7 +4286,7 @@
     <article
       class="repo-card"
       data-repo-name="rust-take-any-kind-of-string"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4277,7 +4305,7 @@
     <article
       class="repo-card"
       data-repo-name="harparse"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="HAR file parser"
     >
       <div class="repo-card-top">
@@ -4296,7 +4324,7 @@
     <article
       class="repo-card"
       data-repo-name="track-my-ipv6"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4315,7 +4343,7 @@
     <article
       class="repo-card"
       data-repo-name="tarmunger"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A terrible python script to do terrible things to tarfiles"
     >
       <div class="repo-card-top">
@@ -4334,7 +4362,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk-saml-shim"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4353,7 +4381,7 @@
     <article
       class="repo-card"
       data-repo-name="docker-py"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A fork of docker/docker-py"
     >
       <div class="repo-card-top">
@@ -4372,7 +4400,7 @@
     <article
       class="repo-card"
       data-repo-name="axum-login"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="🪪 Session-based user authentication for Axum."
     >
       <div class="repo-card-top">
@@ -4391,7 +4419,7 @@
     <article
       class="repo-card"
       data-repo-name="driftwood"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="some logs on the tide"
     >
       <div class="repo-card-top">
@@ -4410,7 +4438,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk_cluster_indexers"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Splunk cluster indexer configuration - see https://github.com/yaleman/splunk_cluster_core for more information."
     >
       <div class="repo-card-top">
@@ -4429,7 +4457,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk_cluster_apps"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="App deployment repo for the Splunk Cluster example"
     >
       <div class="repo-card-top">
@@ -4448,7 +4476,7 @@
     <article
       class="repo-card"
       data-repo-name="rust-test-s3-upload"
-      data-repo-language="Rust"
+      data-repo-language="rust"
       data-repo-description="Testing use of AWS S3 rust libs"
     >
       <div class="repo-card-top">
@@ -4467,7 +4495,7 @@
     <article
       class="repo-card"
       data-repo-name="vsx_map"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Checkpoint VSX Mapping magic"
     >
       <div class="repo-card-top">
@@ -4486,7 +4514,7 @@
     <article
       class="repo-card"
       data-repo-name="smokeping-ffs"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4505,7 +4533,7 @@
     <article
       class="repo-card"
       data-repo-name="trainset"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Controlling my LEGO train set"
     >
       <div class="repo-card-top">
@@ -4524,7 +4552,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk_cluster_core"
-      data-repo-language="HCL"
+      data-repo-language="hcl"
       data-repo-description="Splunk cluster core configuration"
     >
       <div class="repo-card-top">
@@ -4543,7 +4571,7 @@
     <article
       class="repo-card"
       data-repo-name="SubnetMixer"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A way of distilling hosts and subnets to identify groupings."
     >
       <div class="repo-card-top">
@@ -4562,7 +4590,7 @@
     <article
       class="repo-card"
       data-repo-name="pico-keyboard"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Yet another Raspberry Pi Pico Keyboard"
     >
       <div class="repo-card-top">
@@ -4581,7 +4609,7 @@
     <article
       class="repo-card"
       data-repo-name="linkchecker"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A quick linkchecker using requests and beautifulsoup"
     >
       <div class="repo-card-top">
@@ -4600,7 +4628,7 @@
     <article
       class="repo-card"
       data-repo-name="LCA2021-BadgeStand"
-      data-repo-language="G-code"
+      data-repo-language="g-code"
       data-repo-description="A 3D Printable stand fo my LCA2021 Badge"
     >
       <div class="repo-card-top">
@@ -4619,7 +4647,7 @@
     <article
       class="repo-card"
       data-repo-name="splunk_migrator"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="Hilariously terrible scripts for migrating data between clusters."
     >
       <div class="repo-card-top">
@@ -4638,7 +4666,7 @@
     <article
       class="repo-card"
       data-repo-name="hg653"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4657,7 +4685,7 @@
     <article
       class="repo-card"
       data-repo-name="haproxy_squid"
-      data-repo-language="Dockerfile"
+      data-repo-language="dockerfile"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4676,7 +4704,7 @@
     <article
       class="repo-card"
       data-repo-name="hangnail-remover"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4695,7 +4723,7 @@
     <article
       class="repo-card"
       data-repo-name="guacamole-docker"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4714,7 +4742,7 @@
     <article
       class="repo-card"
       data-repo-name="dropbox2s3"
-      data-repo-language="HCL"
+      data-repo-language="hcl"
       data-repo-description="Terraform configuration for transferring a Dropbox account to S3"
     >
       <div class="repo-card-top">
@@ -4733,7 +4761,7 @@
     <article
       class="repo-card"
       data-repo-name="docker-ky-rpz"
-      data-repo-language="Dockerfile"
+      data-repo-language="dockerfile"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4752,7 +4780,7 @@
     <article
       class="repo-card"
       data-repo-name="brainfuck-node"
-      data-repo-language="Brainfuck"
+      data-repo-language="brainfuck"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4771,7 +4799,7 @@
     <article
       class="repo-card"
       data-repo-name="pyfsm"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="yet another FSM implementation"
     >
       <div class="repo-card-top">
@@ -4790,7 +4818,7 @@
     <article
       class="repo-card"
       data-repo-name="workspaces_bot"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="An AWS Lambda to handle slack slash commands for managing AWS Workspaces."
     >
       <div class="repo-card-top">
@@ -4809,7 +4837,7 @@
     <article
       class="repo-card"
       data-repo-name="talk-fail2ban-splunk"
-      data-repo-language="JavaScript"
+      data-repo-language="javascript"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4828,7 +4856,7 @@
     <article
       class="repo-card"
       data-repo-name="technicolorspeedstats"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Quick thing to pull stats from a technicolor TG789vac v3"
     >
       <div class="repo-card-top">
@@ -4847,7 +4875,7 @@
     <article
       class="repo-card"
       data-repo-name="crowdstrike_api"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Python library for Crowdstrike API"
     >
       <div class="repo-card-top">
@@ -4866,7 +4894,7 @@
     <article
       class="repo-card"
       data-repo-name="Andy"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A little bot which does things"
     >
       <div class="repo-card-top">
@@ -4885,7 +4913,7 @@
     <article
       class="repo-card"
       data-repo-name="CoffeeMachine"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4904,7 +4932,7 @@
     <article
       class="repo-card"
       data-repo-name="cryptoledger"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4923,7 +4951,7 @@
     <article
       class="repo-card"
       data-repo-name="flickry"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4942,7 +4970,7 @@
     <article
       class="repo-card"
       data-repo-name="st2-pastebin"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4961,7 +4989,7 @@
     <article
       class="repo-card"
       data-repo-name="faasPy"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -4980,7 +5008,7 @@
     <article
       class="repo-card"
       data-repo-name="st2-s3"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="S3 connector for stackstorm"
     >
       <div class="repo-card-top">
@@ -4999,7 +5027,7 @@
     <article
       class="repo-card"
       data-repo-name="st2-whois"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Whois pack for stackstorm"
     >
       <div class="repo-card-top">
@@ -5018,7 +5046,7 @@
     <article
       class="repo-card"
       data-repo-name="internet_tester"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Tiny python app for doing basic &quot;why is the internet not working&quot; tests."
     >
       <div class="repo-card-top">
@@ -5037,7 +5065,7 @@
     <article
       class="repo-card"
       data-repo-name="mpy-ntpclock"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description=""
     >
       <div class="repo-card-top">
@@ -5056,7 +5084,7 @@
     <article
       class="repo-card"
       data-repo-name="amberelectric"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Amber Electric API thingie"
     >
       <div class="repo-card-top">
@@ -5075,7 +5103,7 @@
     <article
       class="repo-card"
       data-repo-name="dewar"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="Sample storage and handling"
     >
       <div class="repo-card-top">
@@ -5094,7 +5122,7 @@
     <article
       class="repo-card"
       data-repo-name="twofa"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="A TouchID-aware 2-factor authenticator for macOS"
     >
       <div class="repo-card-top">
@@ -5113,7 +5141,7 @@
     <article
       class="repo-card"
       data-repo-name="grbl"
-      data-repo-language="C"
+      data-repo-language="c"
       data-repo-description="This fork of grbl is just to specify some default configs for the 3018"
     >
       <div class="repo-card-top">
@@ -5132,7 +5160,7 @@
     <article
       class="repo-card"
       data-repo-name="misp-docker"
-      data-repo-language="Dockerfile"
+      data-repo-language="dockerfile"
       data-repo-description="MISP Docker (XME edition)"
     >
       <div class="repo-card-top">
@@ -5151,7 +5179,7 @@
     <article
       class="repo-card"
       data-repo-name="superscraper"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A little widget to pull super unit prices from QSuper for my finance tracking."
     >
       <div class="repo-card-top">
@@ -5170,7 +5198,7 @@
     <article
       class="repo-card"
       data-repo-name="CIDRtree"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A Riverbed Cascade host group definition munger."
     >
       <div class="repo-card-top">
@@ -5189,7 +5217,7 @@
     <article
       class="repo-card"
       data-repo-name="container-http-simple"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A tiny docker image to expose a Flask-based website to show how HTTP verbs work."
     >
       <div class="repo-card-top">
@@ -5208,7 +5236,7 @@
     <article
       class="repo-card"
       data-repo-name="container-haproxy-simple"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="playing with containers and haproxy"
     >
       <div class="repo-card-top">
@@ -5227,7 +5255,7 @@
     <article
       class="repo-card"
       data-repo-name="ky-rpz"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="A quick and dirty RPZ implementation for bind (and some squid too)"
     >
       <div class="repo-card-top">
@@ -5246,7 +5274,7 @@
     <article
       class="repo-card"
       data-repo-name="keyrotate"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="SSH key rotation script, keep your keys fresh!"
     >
       <div class="repo-card-top">
@@ -5265,7 +5293,7 @@
     <article
       class="repo-card"
       data-repo-name="container-haproxy-https"
-      data-repo-language="Shell"
+      data-repo-language="shell"
       data-repo-description="A quick example of https load balancing methods."
     >
       <div class="repo-card-top">
@@ -5284,7 +5312,7 @@
     <article
       class="repo-card"
       data-repo-name="Latin-Macron-Macros-for-Word-2003"
-      data-repo-language="Visual Basic"
+      data-repo-language="visual basic"
       data-repo-description="These are some simple macros you can use to add buttons to a toolbar in Word (and probably other Office applications) so that you can get one-click access to adding Macron-enabled text to your documents."
     >
       <div class="repo-card-top">
@@ -5303,7 +5331,7 @@
     <article
       class="repo-card"
       data-repo-name="eulerObjectiveC"
-      data-repo-language="Objective-C"
+      data-repo-language="objective-c"
       data-repo-description="My playing with project euler and objective C"
     >
       <div class="repo-card-top">
@@ -5322,7 +5350,7 @@
     <article
       class="repo-card"
       data-repo-name="TelstraBillParser"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A TERRIBLE hack to deal with Telstra&#x27;s electronic billing details to get something useful."
     >
       <div class="repo-card-top">
@@ -5341,7 +5369,7 @@
     <article
       class="repo-card"
       data-repo-name="Heraldry"
-      data-repo-language=""
+      data-repo-language="unknown"
       data-repo-description="Heraldry Generator"
     >
       <div class="repo-card-top">
@@ -5360,7 +5388,7 @@
     <article
       class="repo-card"
       data-repo-name="TBill"
-      data-repo-language="Python"
+      data-repo-language="python"
       data-repo-description="A simple, hacky parser for Telstra bill files supplied to corporate/large clients.
 Focused on outputting mobile data usage, but may be gradually expanded as needs require."
     >
@@ -5380,7 +5408,7 @@ Focused on outputting mobile data usage, but may be gradually expanded as needs 
       </div>
     </section>
     
-    <footer>Generated 2026-02-12 06:26 UTC from the GitHub REST API.</footer>
+    <footer>Generated 2026-02-12 13:50 UTC from the GitHub REST API.</footer>
   </main>
   <script src="search.js" defer></script>
 </body>
