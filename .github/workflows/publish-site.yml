@@ -34,6 +34,7 @@ jobs:
         if: ${{ steps.generate.outcome == 'success' }}
         uses: peaceiris/actions-gh-pages@v4
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: main
           publish_dir: ./site
           user_name: github-actions[bot]
