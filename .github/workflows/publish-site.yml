@@ -1,0 +1,39 @@
+---
+name: Publish site to yaleman.github.io
+
+on:
+  # 06:00 AEST (UTC+10) is 20:00 UTC on the previous day.
+  schedule:
+    - cron: "0 20 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "generate.py"
+      - "site/**"
+      - ".github/workflows/publish-site.yml"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Generate site
+        id: generate
+        run: python generate.py --username yaleman --output site/index.html
+
+      - name: Deploy site directory to yaleman.github.io
+        if: ${{ steps.generate.outcome == 'success' }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_branch: main
+          publish_dir: ./site
+          user_name: github-actions[bot]

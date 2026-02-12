@@ -1,0 +1,13 @@
+.coverage
+
+.vscode/
+.DS_Store
+.env
+.envrc
+*.asc
+build/
+dist/
+*.pyc
+*.egg-info/
+**/__pycache__/*
+.venv
