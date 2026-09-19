@@ -8,7 +8,7 @@ import urllib.parse
 import urllib.request
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from html import escape
 from pathlib import Path
 from typing import TypeGuard
@@ -120,7 +120,7 @@ def _fetch_repository_page(
 
     parsed: object = json.loads(payload)
     if not isinstance(parsed, list):
-        raise RuntimeError("Unexpected GitHub API response shape; expected a list")
+        raise TypeError("Unexpected GitHub API response shape; expected a list")
     return parsed
 
 
@@ -158,7 +158,7 @@ def _format_timestamp(timestamp: str) -> str:
     if not timestamp:
         return "Unknown"
     try:
-        parsed = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+        parsed = datetime.fromisoformat(timestamp)
     except ValueError:
         return "Unknown"
     return parsed.strftime("%Y-%m-%d")
@@ -181,7 +181,9 @@ def _render_repository_card(repository: Repository) -> str:
     )
     language = escape(repository.language) if repository.language else "Unknown"
     data_repo_name = escape(repository.name, quote=True)
-    normalized_language = repository.language.casefold() if repository.language else "unknown"
+    normalized_language = (
+        repository.language.casefold() if repository.language else "unknown"
+    )
     data_repo_language = escape(normalized_language, quote=True)
     data_repo_description = escape(repository.description, quote=True)
 
@@ -220,7 +222,9 @@ def _render_language_filters() -> str:
 def _render_repository_section(
     section_id: str, title: str, repositories: Sequence[Repository], empty_message: str
 ) -> str:
-    cards = "\n".join(_render_repository_card(repository) for repository in repositories)
+    cards = "\n".join(
+        _render_repository_card(repository) for repository in repositories
+    )
     list_content = cards
     if not list_content:
         list_content = f'<p class="section-empty">{escape(empty_message)}</p>'
@@ -245,7 +249,7 @@ def render_page(
     active_repositories = [repo for repo in repositories if not repo.archived]
     archived_repositories = [repo for repo in repositories if repo.archived]
 
-    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    generated_at = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     escaped_username = escape(username)
     active_section = _render_repository_section(
         "active-repositories",
@@ -332,7 +336,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     repositories = fetch_public_repositories(args.username, token=args.token)
     html = render_page(args.username, repositories)
     write_page(args.output, html)
-    print(f"Wrote {args.output} with {len(repositories)} repositories for {args.username}.")
+    print(
+        f"Wrote {args.output} with {len(repositories)} repositories for {args.username}."
+    )
     return 0
 
 

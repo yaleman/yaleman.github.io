@@ -2,14 +2,13 @@
 default:
     just --list
 
-check: lint mypy biome
+check: lint typing biome
 
 lint:
     uv run ruff check generate.py tests
 
-mypy:
+typing:
     uv run ty check
-    uv run mypy --strict generate.py tests
 
 biome:
     npx --yes @biomejs/biome lint site/search.js site/style.css
