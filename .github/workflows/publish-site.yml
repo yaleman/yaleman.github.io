@@ -16,6 +16,9 @@ on:
 
 jobs:
   build:
+    name: Build site
+    permissions:
+      contents: write # so we can make the cron thing happy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
